@@ -4,251 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Caio Victor | Analista de Mídia Paga</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, #0a0a0a 0%, #1a0505 100%);
-            color: #ffffff;
-            line-height: 1.6;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        header {
-            text-align: center;
-            padding: 100px 20px 80px;
-            background: radial-gradient(circle at center, rgba(255, 0, 51, 0.15) 0%, transparent 70%);
-            position: relative;
-        }
-
-        .profile-photo {
-            width: 180px;
-            height: 180px;
-            margin: 0 auto 40px;
-            border-radius: 50%;
-            overflow: hidden;
-            border: 4px solid #ff0033;
-            box-shadow: 0 0 40px rgba(255, 0, 51, 0.6);
-            animation: pulse 3s ease-in-out infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { box-shadow: 0 0 40px rgba(255, 0, 51, 0.6); }
-            50% { box-shadow: 0 0 60px rgba(255, 0, 51, 0.9); }
-        }
-
-        .profile-photo img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        h1 {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 4rem;
-            font-weight: 900;
-            letter-spacing: 8px;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-        }
-
-        .subtitle {
-            font-size: 1.5rem;
-            font-weight: 300;
-            margin-bottom: 30px;
-        }
-
-        .subtitle span {
-            color: #ff0033;
-            font-weight: 600;
-        }
-
-        .description {
-            font-size: 1.1rem;
-            max-width: 800px;
-            margin: 0 auto 40px;
-            opacity: 0.9;
-        }
-
-        .cta-button {
-            display: inline-block;
-            padding: 18px 50px;
-            background: #ff0033;
-            color: #ffffff;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 700;
-            font-size: 1.2rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 10px 30px rgba(255, 0, 51, 0.4);
-            letter-spacing: 2px;
-        }
-
-        .cta-button:hover {
-            background: #cc0029;
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(255, 0, 51, 0.6);
-        }
-
-        .services {
-            padding: 80px 20px;
-            background: rgba(0, 0, 0, 0.3);
-            border-radius: 20px;
-            margin: 40px 0;
-        }
-
-        .services h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 50px;
-            color: #ff0033;
-            font-family: 'Orbitron', sans-serif;
-            letter-spacing: 4px;
-        }
-
-        .service-card {
-            background: rgba(255, 255, 255, 0.05);
-            border: 2px solid rgba(255, 0, 51, 0.3);
-            border-radius: 15px;
-            margin-bottom: 20px;
-            overflow: hidden;
-            transition: all 0.3s ease;
-        }
-
-        .service-card:hover {
-            border-color: #ff0033;
-            transform: translateY(-5px);
-        }
-
-        .service-header {
-            padding: 25px 30px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            transition: background 0.3s ease;
-        }
-
-        .service-header:hover {
-            background: rgba(255, 0, 51, 0.1);
-        }
-
-        .service-icon {
-            font-size: 2rem;
-            margin-right: 20px;
-            color: #ff0033;
-        }
-
-        .service-title {
-            flex: 1;
-            font-size: 1.5rem;
-            font-weight: 600;
-        }
-
-        .service-arrow {
-            font-size: 1.5rem;
-            color: #ff0033;
-            transition: transform 0.3s ease;
-        }
-
-        .service-card.active .service-arrow {
-            transform: rotate(180deg);
-        }
-
-        .service-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease, padding 0.3s ease;
-            padding: 0 30px;
-        }
-
-        .service-card.active .service-content {
-            max-height: 500px;
-            padding: 0 30px 25px;
-        }
-
-        .service-content p {
-            line-height: 1.8;
-            opacity: 0.9;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: linear-gradient(135deg, #0a0a0a 0%, #1a0505 100%); color: #ffffff; line-height: 1.6; min-height: 100vh; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        header { text-align: center; padding: 80px 20px 60px; background: radial-gradient(circle at center, rgba(255, 0, 51, 0.15) 0%, transparent 70%); }
+        .profile-photo { width: 180px; height: 180px; margin: 0 auto 30px; border-radius: 50%; overflow: hidden; border: 4px solid #ff0033; box-shadow: 0 0 40px rgba(255, 0, 51, 0.6); animation: pulse 3s ease-in-out infinite; background: #1a1a1a; }
+        .profile-photo img { width: 100%; height: 100%; object-fit: cover; }
+        @keyframes pulse { 0%, 100% { box-shadow: 0 0 40px rgba(255, 0, 51, 0.6); } 50% { box-shadow: 0 0 60px rgba(255, 0, 51, 0.9); } }
+        h1 { font-family: 'Orbitron', sans-serif; font-size: clamp(2.5rem, 8vw, 4rem); font-weight: 900; letter-spacing: 8px; margin-bottom: 20px; }
+        .subtitle { font-size: clamp(1.2rem, 3vw, 1.5rem); font-weight: 300; margin-bottom: 25px; }
+        .subtitle .highlight { color: #ff0033; font-weight: 600; }
+        .description { font-size: 1.1rem; max-width: 700px; margin: 0 auto 35px; opacity: 0.9; }
+        .cta-button { display: inline-block; padding: 18px 50px; background: #ff0033; color: #ffffff; text-decoration: none; border-radius: 50px; font-weight: 700; font-size: 1.2rem; transition: all 0.3s ease; box-shadow: 0 10px 30px rgba(255, 0, 51, 0.4); letter-spacing: 2px; }
+        .cta-button:hover { background: #cc0029; transform: translateY(-3px); box-shadow: 0 15px 40px rgba(255, 0, 51, 0.6); }
+        .services { padding: 60px 20px; background: rgba(0, 0, 0, 0.3); border-radius: 20px; margin: 40px 0; }
+        .services h2 { text-align: center; font-size: 2.5rem; margin-bottom: 40px; color: #ff0033; font-family: 'Orbitron', sans-serif; letter-spacing: 4px; }
+        .service-card { background: rgba(255, 255, 255, 0.05); border: 2px solid rgba(255, 0, 51, 0.3); border-radius: 15px; margin-bottom: 20px; overflow: hidden; transition: all 0.3s ease; cursor: pointer; }
+        .service-card:hover { border-color: #ff0033; transform: translateY(-3px); }
+        .service-header { padding: 25px 30px; display: flex; align-items: center; justify-content: space-between; transition: background 0.3s ease; }
+        .service-header:hover { background: rgba(255, 0, 51, 0.1); }
+        .service-left { display: flex; align-items: center; gap: 20px; flex: 1; }
+        .service-icon { width: 40px; height: 40px; flex-shrink: 0; }
+        .service-icon svg { width: 100%; height: 100%; fill: #ff0033; }
+        .service-title { font-size: 1.5rem; font-weight: 600; }
+        .service-arrow { font-size: 1.5rem; color: #ff0033; transition: transform 0.3s ease; }
+        .service-card.active .service-arrow { transform: rotate(180deg); }
+        .service-content { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.4s ease; padding: 0 30px; }
+        .service-card.active .service-content { max-height: 300px; padding: 0 30px 25px; }
+        .service-content p { line-height: 1.8; opacity: 0.9; font-size: 1rem; }
+        @media (max-width: 768px) { .service-left { gap: 15px; } .service-title { font-size: 1.2rem; } .service-icon { width: 32px; height: 32px; } }
     </style>
 </head>
 <body>
     <header>
-        <div class="profile-photo">
-            <img src="https://i.imgur.com/YourPhotoID.jpg" alt="Caio Victor">
-        </div>
+        <div class="profile-photo"><img src="https://i.postimg.cc/8cKJ0W3T/perfil.jpg" alt="Caio Victor" onerror="this.style.display='none'"></div>
         <h1>CAIO VICTOR</h1>
-        <p class="subtitle">Analista de Mídia Paga & Especialista em <span>Automação</span></p>
-        <p class="description">
-            Mais de R$ 2 milhões geridos em campanhas digitais + Automações que otimizam processos e multiplicam resultados.
-        </p>
+        <p class="subtitle">Analista de Mídia Paga & Especialista em <span class="highlight">Automação</span></p>
+        <p class="description">Mais de R$ 2 milhões geridos em campanhas digitais + Automações que otimizam processos e multiplicam resultados.</p>
         <a href="https://wa.me/5585999628005?text=Olá%20Caio%2C%20vi%20seu%20anúncio%20e%20gostaria%20de%20mais%20informações%2C%20por%20favor" class="cta-button" target="_blank">ENTRE EM CONTATO</a>
     </header>
-
     <div class="container">
         <section class="services">
             <h2>Serviços Oferecidos</h2>
-            
             <div class="service-card" onclick="toggleService(this)">
-                <div class="service-header">
-                    <span class="service-icon">📊</span>
-                    <span class="service-title">Gestão de Tráfego Pago</span>
-                    <span class="service-arrow">▼</span>
-                </div>
-                <div class="service-content">
-                    <p>Criação, otimização e gerenciamento de campanhas em Google Ads, Facebook Ads, Instagram Ads e outras plataformas. Com mais de R$ 2 milhões em investimento gerenciado e 1000+ contratos concluídos, entrego resultados mensuráveis que aumentam seu ROI e maximizam suas conversões.</p>
-                </div>
+                <div class="service-header"><div class="service-left"><div class="service-icon"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"/></svg></div><span class="service-title">Gestão de Tráfego Pago</span></div><span class="service-arrow">▼</span></div>
+                <div class="service-content"><p>Criação, otimização e gerenciamento de campanhas em Google Ads, Facebook Ads, Instagram Ads e outras plataformas. Com mais de R$ 2 milhões em investimento gerenciado e 1000+ contratos concluídos, entrego resultados mensuráveis que aumentam seu ROI e maximizam suas conversões.</p></div>
             </div>
-
             <div class="service-card" onclick="toggleService(this)">
-                <div class="service-header">
-                    <span class="service-icon">⚙️</span>
-                    <span class="service-title">Automação de Processos</span>
-                    <span class="service-arrow">▼</span>
-                </div>
-                <div class="service-content">
-                    <p>Desenvolvimento de automações personalizadas que eliminam tarefas repetitivas, reduzem erros humanos e liberam sua equipe para focar no que realmente importa. Desde integração de sistemas até automação de marketing e atendimento, transformo seu fluxo de trabalho em uma máquina eficiente.</p>
-                </div>
+                <div class="service-header"><div class="service-left"><div class="service-icon"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div><span class="service-title">Automação de Processos</span></div><span class="service-arrow">▼</span></div>
+                <div class="service-content"><p>Desenvolvimento de automações personalizadas que eliminam tarefas repetitivas, reduzem erros humanos e liberam sua equipe para focar no que realmente importa. Desde integração de sistemas até automação de marketing e atendimento, transformo seu fluxo de trabalho em uma máquina eficiente.</p></div>
             </div>
-
             <div class="service-card" onclick="toggleService(this)">
-                <div class="service-header">
-                    <span class="service-icon">📦</span>
-                    <span class="service-title">Consultoria Estratégica</span>
-                    <span class="service-arrow">▼</span>
-                </div>
-                <div class="service-content">
-                    <p>Análise completa do seu negócio para identificar oportunidades de crescimento. Desenvolvimento de estratégias personalizadas de marketing digital que conectam sua marca ao público certo, no momento certo, com a mensagem certa.</p>
-                </div>
+                <div class="service-header"><div class="service-left"><div class="service-icon"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 6h-2.18c.11-.31.18-.65.18-1 0-1.66-1.34-3-3-3-1.05 0-1.96.54-2.5 1.35l-.5.67-.5-.68C10.96 2.54 10.05 2 9 2 7.34 2 6 3.34 6 5c0 .35.07.69.18 1H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-5-2c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zM9 4c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm11 15H4v-2h16v2zm0-5H4V8h5.08L7 10.83 8.62 12 11 8.76l1-1.36 1 1.36L15.38 12 17 10.83 14.92 8H20v6z"/></svg></div><span class="service-title">Consultoria Estratégica</span></div><span class="service-arrow">▼</span></div>
+                <div class="service-content"><p>Análise completa do seu negócio para identificar oportunidades de crescimento. Desenvolvimento de estratégias personalizadas de marketing digital que conectam sua marca ao público certo, no momento certo, com a mensagem certa.</p></div>
             </div>
         </section>
     </div>
-
     <script>
         function toggleService(card) {
-            // Fecha todos os outros cards
             const allCards = document.querySelectorAll('.service-card');
-            allCards.forEach(c => {
-                if (c !== card && c.classList.contains('active')) {
-                    c.classList.remove('active');
-                }
-            });
-            
-            // Alterna o card clicado
+            allCards.forEach(c => { if (c !== card && c.classList.contains('active')) { c.classList.remove('active'); } });
             card.classList.toggle('active');
         }
     </script>
