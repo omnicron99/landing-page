@@ -30,7 +30,7 @@
         header {
             text-align: center;
             padding: 100px 20px 80px;
-            background: radial-gradient(circle at center, rgba(255, 0, 0, 0.15) 0%, transparent 70%);
+            background: radial-gradient(circle at center, rgba(255, 0, 51, 0.15) 0%, transparent 70%);
             position: relative;
         }
 
@@ -46,12 +46,8 @@
         }
 
         @keyframes pulse {
-            0%, 100% {
-                box-shadow: 0 0 40px rgba(255, 0, 51, 0.6);
-            }
-            50% {
-                box-shadow: 0 0 60px rgba(255, 0, 51, 0.9);
-            }
+            0%, 100% { box-shadow: 0 0 40px rgba(255, 0, 51, 0.6); }
+            50% { box-shadow: 0 0 60px rgba(255, 0, 51, 0.9); }
         }
 
         .profile-photo img {
@@ -62,248 +58,199 @@
 
         h1 {
             font-family: 'Orbitron', sans-serif;
-            font-size: 4em;
-            margin-bottom: 20px;
-            color: #ffffff;
+            font-size: 4rem;
             font-weight: 900;
-            letter-spacing: 4px;
-            text-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+            letter-spacing: 8px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
         }
 
         .subtitle {
-            font-size: 1.8em;
-            margin-bottom: 20px;
-            color: #cccccc;
+            font-size: 1.5rem;
+            font-weight: 300;
+            margin-bottom: 30px;
         }
 
-        .highlight {
+        .subtitle span {
             color: #ff0033;
-            font-weight: 700;
+            font-weight: 600;
         }
 
-        .tagline {
-            font-size: 1.2em;
+        .description {
+            font-size: 1.1rem;
             max-width: 800px;
             margin: 0 auto 40px;
-            color: #aaaaaa;
+            opacity: 0.9;
         }
 
         .cta-button {
             display: inline-block;
-            padding: 18px 45px;
-            background: linear-gradient(45deg, #ff0033, #cc0000);
-            color: white;
+            padding: 18px 50px;
+            background: #ff0033;
+            color: #ffffff;
             text-decoration: none;
             border-radius: 50px;
-            font-size: 1.2em;
-            font-weight: bold;
-            transition: all 0.3s;
-            box-shadow: 0 0 30px rgba(255, 0, 51, 0.5);
-            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(255, 0, 51, 0.4);
             letter-spacing: 2px;
         }
 
         .cta-button:hover {
+            background: #cc0029;
             transform: translateY(-3px);
-            box-shadow: 0 0 50px rgba(255, 0, 51, 0.8);
+            box-shadow: 0 15px 40px rgba(255, 0, 51, 0.6);
         }
 
-        .section {
-            margin: 60px 0;
-            padding: 40px;
-            background: rgba(20, 20, 20, 0.6);
-            border-radius: 15px;
-            border: 1px solid rgba(255, 0, 51, 0.2);
+        .services {
+            padding: 80px 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 20px;
+            margin: 40px 0;
         }
 
-        .section h2 {
-            font-size: 2.5em;
-            margin-bottom: 30px;
-            color: #ff0033;
+        .services h2 {
             text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: #ff0033;
             font-family: 'Orbitron', sans-serif;
+            letter-spacing: 4px;
         }
 
-        .accordion {
-            margin: 20px 0;
-        }
-
-        .accordion-item {
-            background: rgba(0, 0, 0, 0.4);
-            margin-bottom: 15px;
-            border-radius: 10px;
-            border: 1px solid rgba(255, 0, 51, 0.3);
+        .service-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(255, 0, 51, 0.3);
+            border-radius: 15px;
+            margin-bottom: 20px;
             overflow: hidden;
-            transition: all 0.3s;
+            transition: all 0.3s ease;
         }
 
-        .accordion-item:hover {
-            border-color: rgba(255, 0, 51, 0.5);
+        .service-card:hover {
+            border-color: #ff0033;
+            transform: translateY(-5px);
         }
 
-        .accordion-header {
-            padding: 20px;
+        .service-header {
+            padding: 25px 30px;
             cursor: pointer;
-            font-size: 1.3em;
-            font-weight: bold;
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            transition: all 0.3s;
+            justify-content: space-between;
+            transition: background 0.3s ease;
         }
 
-        .accordion-header:hover {
+        .service-header:hover {
             background: rgba(255, 0, 51, 0.1);
         }
 
-        .accordion-title {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .icon {
-            width: 28px;
-            height: 28px;
-            stroke: #ff0033;
-            stroke-width: 2;
-            fill: none;
-        }
-
-        .accordion-icon {
-            font-size: 1.5em;
-            transition: transform 0.3s;
+        .service-icon {
+            font-size: 2rem;
+            margin-right: 20px;
             color: #ff0033;
         }
 
-        .accordion-item.active .accordion-icon {
+        .service-title {
+            flex: 1;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .service-arrow {
+            font-size: 1.5rem;
+            color: #ff0033;
+            transition: transform 0.3s ease;
+        }
+
+        .service-card.active .service-arrow {
             transform: rotate(180deg);
         }
 
-        .accordion-content {
+        .service-content {
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.3s ease;
-            padding: 0 20px;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            padding: 0 30px;
         }
 
-        .accordion-item.active .accordion-content {
+        .service-card.active .service-content {
             max-height: 500px;
-            padding: 20px;
+            padding: 0 30px 25px;
         }
 
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin: 40px 0;
-            flex-wrap: wrap;
-        }
-
-        .social-link {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            padding: 14px 28px;
-            background: rgba(255, 0, 51, 0.1);
-            border: 1px solid rgba(255, 0, 51, 0.3);
-            border-radius: 10px;
-            color: white;
-            text-decoration: none;
-            transition: all 0.3s;
-            font-weight: 500;
-        }
-
-        .social-link:hover {
-            background: rgba(255, 0, 51, 0.2);
-            transform: translateY(-3px);
-            box-shadow: 0 5px 20px rgba(255, 0, 51, 0.3);
-        }
-
-        .social-icon {
-            width: 24px;
-            height: 24px;
-            stroke: #ff0033;
-            fill: none;
-            stroke-width: 2;
-        }
-
-        footer {
-            text-align: center;
-            padding: 40px;
-            margin-top: 60px;
-            border-top: 1px solid rgba(255, 0, 51, 0.3);
-        }
-
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2.5em;
-            }
-            .subtitle {
-                font-size: 1.3em;
-            }
-            .profile-photo {
-                width: 140px;
-                height: 140px;
-            }
-            .social-links {
-                flex-direction: column;
-                align-items: center;
-            }
+        .service-content p {
+            line-height: 1.8;
+            opacity: 0.9;
         }
     </style>
 </head>
 <body>
+    <header>
+        <div class="profile-photo">
+            <img src="https://i.imgur.com/YourPhotoID.jpg" alt="Caio Victor">
+        </div>
+        <h1>CAIO VICTOR</h1>
+        <p class="subtitle">Analista de Mídia Paga & Especialista em <span>Automação</span></p>
+        <p class="description">
+            Mais de R$ 2 milhões geridos em campanhas digitais + Automações que otimizam processos e multiplicam resultados.
+        </p>
+        <a href="https://wa.me/5585999628005?text=Olá%20Caio%2C%20vi%20seu%20anúncio%20e%20gostaria%20de%20mais%20informações%2C%20por%20favor" class="cta-button" target="_blank">ENTRE EM CONTATO</a>
+    </header>
+
     <div class="container">
-        <header>
-            <div class="profile-photo">
-                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcICQsJCAgKCAcHCg0KCgsMDAwMBwkODw0MDgsMDAz/2wBDAQICAgMDAwYDAwYMCAcIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCAHgAeADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9/KKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigD/9k=" alt="Caio Victor">
-            </div>
-            <h1>CAIO VICTOR</h1>
-            <p class="subtitle">Analista de Mídia Paga & Especialista em <span class="highlight">Automação</span></p>
-            <p class="tagline">Mais de R$ 2 milhões geridos em campanhas digitais + Automações que otimizam processos e multiplicam resultados.</p>
-            <a href="https://wa.me/5585999628005?text=Ol%C3%A1%20Caio%2C%20vi%20seu%20an%C3%BAncio%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%2C%20por%20favor" class="cta-button" target="_blank">Entre em Contato</a>
-        </header>
-
-        <section class="section">
+        <section class="services">
             <h2>Serviços Oferecidos</h2>
-            <div class="accordion">
-                <div class="accordion-item">
-                    <div class="accordion-header">
-                        <div class="accordion-title">
-                            <svg class="icon" viewBox="0 0 24 24">
-                                ircle cx="12" cy="12" r="10"/>
-                                <path d="M12 6v6l4 2"/>
-                            </svg>
-                            <span>Gestão de Tráfego Pago</span>
-                        </div>
-                        <span class="accordion-icon">▼</span>
-                    </div>
-                    <div class="accordion-content">
-                        <p>Criação, otimização e gerenciamento de campanhas em Google Ads, Facebook Ads, Instagram Ads e outras plataformas. Com mais de R$ 2 milhões em investimento gerenciado e 1000+ contratos concluídos, entrego resultados mensuráveis que aumentam seu ROI e maximizam suas conversões.</p>
-                    </div>
+            
+            <div class="service-card" onclick="toggleService(this)">
+                <div class="service-header">
+                    <span class="service-icon">📊</span>
+                    <span class="service-title">Gestão de Tráfego Pago</span>
+                    <span class="service-arrow">▼</span>
                 </div>
-
-                <div class="accordion-item">
-                    <div class="accordion-header">
-                        <div class="accordion-title">
-                            <svg class="icon" viewBox="0 0 24 24">
-                                <rect x="4" y="4" width="16" height="16" rx="2"/>
-                                <path d="M8 2v4M16 2v4M4 10h16"/>
-                            </svg>
-                            <span>Automação de Processos</span>
-                        </div>
-                        <span class="accordion-icon">▼</span>
-                    </div>
-                    <div class="accordion-content">
-                        <p>Desenvolvimento de automações personalizadas que eliminam tarefas repetitivas, reduzem erros humanos e liberam sua equipe para focar no que realmente importa. Desde integração de sistemas até automação de marketing e atendimento, transformo seu fluxo de trabalho em uma máquina eficiente.</p>
-                    </div>
+                <div class="service-content">
+                    <p>Criação, otimização e gerenciamento de campanhas em Google Ads, Facebook Ads, Instagram Ads e outras plataformas. Com mais de R$ 2 milhões em investimento gerenciado e 1000+ contratos concluídos, entrego resultados mensuráveis que aumentam seu ROI e maximizam suas conversões.</p>
                 </div>
+            </div>
 
-                <div class="accordion-item">
-                    <div class="accordion-header">
-                        <div class="accordion-title">
-                            <svg class="icon" viewBox="0 0 24 24">
-                                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
-                                <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
-                                <line x1="12" y1="22.08" x2="12" y2
+            <div class="service-card" onclick="toggleService(this)">
+                <div class="service-header">
+                    <span class="service-icon">⚙️</span>
+                    <span class="service-title">Automação de Processos</span>
+                    <span class="service-arrow">▼</span>
+                </div>
+                <div class="service-content">
+                    <p>Desenvolvimento de automações personalizadas que eliminam tarefas repetitivas, reduzem erros humanos e liberam sua equipe para focar no que realmente importa. Desde integração de sistemas até automação de marketing e atendimento, transformo seu fluxo de trabalho em uma máquina eficiente.</p>
+                </div>
+            </div>
+
+            <div class="service-card" onclick="toggleService(this)">
+                <div class="service-header">
+                    <span class="service-icon">📦</span>
+                    <span class="service-title">Consultoria Estratégica</span>
+                    <span class="service-arrow">▼</span>
+                </div>
+                <div class="service-content">
+                    <p>Análise completa do seu negócio para identificar oportunidades de crescimento. Desenvolvimento de estratégias personalizadas de marketing digital que conectam sua marca ao público certo, no momento certo, com a mensagem certa.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        function toggleService(card) {
+            // Fecha todos os outros cards
+            const allCards = document.querySelectorAll('.service-card');
+            allCards.forEach(c => {
+                if (c !== card && c.classList.contains('active')) {
+                    c.classList.remove('active');
+                }
+            });
+            
+            // Alterna o card clicado
+            card.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
