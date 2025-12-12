@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caio V. | Analista de Mídia Paga</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a0505 100%);
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 80px 20px;
+            background: radial-gradient(circle at center, rgba(255, 0, 0, 0.1) 0%, transparent 70%);
+        }
+
+        h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            text-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+        }
+
+        .highlight {
+            color: #ff0033;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .subtitle {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            color: #cccccc;
+        }
+
+        .tagline {
+            font-size: 1.2em;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            color: #aaaaaa;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 18px 40px;
+            background: linear-gradient(45deg, #ff0033, #cc0000);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.2em;
+            font-weight: bold;
+            transition: all 0.3s;
+            box-shadow: 0 0 30px rgba(255, 0, 51, 0.5);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 50px rgba(255, 0, 51, 0.8);
+        }
+
+        .section {
+            margin: 60px 0;
+            padding: 40px;
+            background: rgba(20, 20, 20, 0.6);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 0, 51, 0.2);
+        }
+
+        .section h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            color: #ff0033;
+            text-align: center;
+        }
+
+        .accordion {
+            margin: 20px 0;
+        }
+
+        .accordion-item {
+            background: rgba(0, 0, 0, 0.4);
+            margin-bottom: 15px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 0, 51, 0.3);
+            overflow: hidden;
+        }
+
+        .accordion-header {
+            padding: 20px;
+            cursor: pointer;
+            font-size: 1.3em;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s;
+        }
+
+        .accordion-header:hover {
+            background: rgba(255, 0, 51, 0.1);
+        }
+
+        .accordion-icon {
+            font-size: 1.5em;
+            transition: transform 0.3s;
+        }
+
+        .accordion-item.active .accordion-icon {
+            transform: rotate(180deg);
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            padding: 0 20px;
+        }
+
+        .accordion-item.active .accordion-content {
+            max-height: 500px;
+            padding: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 25px;
+            background: rgba(255, 0, 51, 0.1);
+            border: 1px solid rgba(255, 0, 51, 0.3);
+            border-radius: 10px;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .social-link:hover {
+            background: rgba(255, 0, 51, 0.2);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 20px rgba(255, 0, 51, 0.3);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            margin-top: 60px;
+            border-top: 1px solid rgba(255, 0, 51, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+            .subtitle {
+                font-size: 1.3em;
+            }
+            .social-links {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>CAIO <span class="highlight">VICTOR</span></h1>
+            <p class="subtitle">Analista de Mídia Paga & Especialista em <span class="highlight">Automação</span></p>
+            <p class="tagline">Mais de R$ 2 milhões geridos em campanhas digitais + Automações que otimizam processos e multiplicam resultados.</p>
+            <a href="mailto:caiovictorgomes@gmail.com" class="cta-button">📧 Entre em Contato</a>
+        </header>
+
+        <section class="section">
+            <h2>Serviços Oferecidos</h2>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>🎯 Gestão de Tráfego Pago</span>
+                        <span class="accordion-icon">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Criação, otimização e gerenciamento de campanhas em Google Ads, Facebook Ads, Instagram Ads e outras plataformas. Com mais de R$ 2 milhões em investimento gerenciado e 1000+ contratos concluídos, entrego resultados mensuráveis que aumentam seu ROI e maximizam suas conversões.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>🤖 Automação de Processos</span>
+                        <span class="accordion-icon">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Desenvolvimento de automações personalizadas que eliminam tarefas repetitivas, reduzem erros humanos e liberam sua equipe para focar no que realmente importa. Desde integração de sistemas até automação de marketing e atendimento, transformo seu fluxo de trabalho em uma máquina eficiente.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>📊 Consultoria Estratégica</span>
+                        <span class="accordion-icon">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Análise profunda do seu negócio para identificar oportunidades de crescimento através de mídia paga e automação. Desenvolvo estratégias personalizadas que conectam suas metas de negócio com as ferramentas certas para alcançá-las.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Por Que Investir em Mídia Paga?</h2>
+            <p style="font-size: 1.1em; line-height: 1.8; margin-bottom: 20px;">
+                A gestão de tráfego pago é o combustível que impulsiona negócios no ambiente digital. Diferente do tráfego orgânico, que leva tempo para construir, a mídia paga oferece resultados imediatos e escaláveis. Você investe estrategicamente para aparecer exatamente onde seus clientes estão procurando, no momento certo.
+            </p>
+            <p style="font-size: 1.1em; line-height: 1.8;">
+                Com campanhas otimizadas, cada real investido trabalha para gerar leads qualificados, aumentar vendas e construir reconhecimento de marca. É marketing baseado em dados, onde cada clique conta e cada conversão é rastreável.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2>Como a Automação Transforma Seu Negócio?</h2>
+            <p style="font-size: 1.1em; line-height: 1.8; margin-bottom: 20px;">
+                Automação não é sobre substituir pessoas - é sobre potencializar equipes. Enquanto sistemas automatizados cuidam de tarefas repetitivas, sua equipe pode focar em estratégia, criatividade e relacionamento com clientes.
+            </p>
+            <p style="font-size: 1.1em; line-height: 1.8;">
+                Imagine: leads capturados e qualificados automaticamente, respostas instantâneas 24/7, relatórios gerados sem esforço manual, e processos que funcionam perfeitamente enquanto você dorme. É eficiência que se traduz diretamente em lucro e crescimento sustentável.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2>Conecte-se Comigo</h2>
+            <div class="social-links">
+                <a href="mailto:caiovictorgomes@gmail.com" class="social-link">📧 Email</a>
+                <a href="https://github.com/omnicron99" target="_blank" class="social-link">💻 GitHub</a>
+                <a href="https://instagram.com/caio.analistamp" target="_blank" class="social-link">📱 Instagram</a>
+                <a href="https://www.linkedin.com/in/caio-victor-lima-gomes-62746847" target="_blank" class="social-link">💼 LinkedIn</a>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2024 Caio Victor - Todos os direitos reservados</p>
+        <p style="margin-top: 10px; color: #666;">Transformando investimento em resultados através de mídia paga e automação inteligente</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.accordion-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const item = header.parentElement;
+                const isActive = item.classList.contains('active');
+                
+                document.querySelectorAll('.accordion-item').forEach(i => {
+                    i.classList.remove('active');
+                });
+                
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
